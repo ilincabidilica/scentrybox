@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scentry Box — alege varianta de design</title>
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#1A1613" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>🤍</text></svg>" />
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#1A1613;color:#F6F1E8;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px 20px;text-align:center}
+    .brand{font-family:Georgia,serif;font-size:1.8rem;margin-bottom:8px}
+    .brand b{color:#D9B26A;font-style:italic;font-weight:400}
+    .lead{color:rgba(246,241,232,.7);font-size:1rem;margin-bottom:36px;max-width:480px}
+    .cards{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;width:100%;max-width:720px}
+    a.card{flex:1 1 280px;text-decoration:none;border-radius:20px;padding:36px 28px;transition:transform .15s;border:1px solid rgba(255,255,255,.12)}
+    a.card:hover{transform:translateY(-4px)}
+    .c-edit{background:#F6F1E8;color:#1A1613}
+    .c-play{background:linear-gradient(135deg,#6C4CE0,#9C6BFF);color:#fff}
+    .card .k{text-transform:uppercase;letter-spacing:.18em;font-size:.72rem;opacity:.7;margin-bottom:10px}
+    .card .t{font-family:Georgia,serif;font-size:1.5rem;margin-bottom:8px}
+    .c-play .t{font-family:inherit;font-weight:800}
+    .card .d{font-size:.92rem;opacity:.85}
+    .card .go{display:inline-block;margin-top:18px;font-weight:600;font-size:.9rem}
+    .foot{margin-top:40px;font-size:.8rem;color:rgba(246,241,232,.4)}
+  </style>
+</head>
+<body>
+  <div class="brand">Scentry<b>Box</b></div>
+  <p class="lead">Două variante de design pentru landing page. Spune-mi care îți place mai mult. 🤍</p>
+  <div class="cards">
+    <a class="card c-edit" href="editorial.html">
+      <div class="k">Varianta 1</div>
+      <div class="t">Editorial luxe</div>
+      <div class="d">Elegant, rafinat, premium — serif amplu pe fundal crem.</div>
+      <span class="go">Vezi varianta 1 →</span>
+    </a>
+    <a class="card c-play" href="playful.html">
+      <div class="k">Varianta 2</div>
+      <div class="t">Bold &amp; playful</div>
+      <div class="d">Colorat, jucăuș, energic — perfect pentru TikTok/Instagram.</div>
+      <span class="go">Vezi varianta 2 →</span>
+    </a>
+  </div>
+  <p class="foot">Scentry Box — primul mystery scent box din România (preview)</p>
+</body>
+</html>
