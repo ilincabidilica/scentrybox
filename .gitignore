@@ -1,0 +1,7 @@
+# NU urca lista de branduri (date interne) in repo-ul public
+ScentBox_Branduri.xlsx
+~$*
+
+# fisiere de sistem / preview
+.DS_Store
+_preview/

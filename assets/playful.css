@@ -100,7 +100,7 @@ a { color:var(--violet-dark); font-weight:600; }
 .price-block p { color:#6b5410; }
 .price-block strong { color:#473400; }
 
-.section-final { max-width:640px; background:var(--violet); color:#fff; border-radius:32px; padding:52px 32px; box-shadow:var(--shadow); }
+.section-final { max-width:620px; margin:0 auto; background:var(--violet); color:#fff; border-radius:32px; padding:52px 32px; box-shadow:var(--shadow); }
 .section-final h2 { color:#fff; }
 .section-final p { color:rgba(255,255,255,.9); }
 .section-final .btn-primary { background:#fff; color:var(--violet); box-shadow:0 8px 0 #cdbcff; }
