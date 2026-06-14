@@ -3,46 +3,182 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Scentry Box — alege varianta de design</title>
-  <meta name="robots" content="noindex" />
-  <meta name="theme-color" content="#1A1613" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>🤍</text></svg>" />
-  <style>
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#1A1613;color:#F6F1E8;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px 20px;text-align:center}
-    .brand{font-family:Georgia,serif;font-size:1.8rem;margin-bottom:8px}
-    .brand b{color:#D9B26A;font-style:italic;font-weight:400}
-    .lead{color:rgba(246,241,232,.7);font-size:1rem;margin-bottom:36px;max-width:480px}
-    .cards{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;width:100%;max-width:720px}
-    a.card{flex:1 1 280px;text-decoration:none;border-radius:20px;padding:36px 28px;transition:transform .15s;border:1px solid rgba(255,255,255,.12)}
-    a.card:hover{transform:translateY(-4px)}
-    .c-edit{background:#F6F1E8;color:#1A1613}
-    .c-play{background:linear-gradient(135deg,#6C4CE0,#9C6BFF);color:#fff}
-    .card .k{text-transform:uppercase;letter-spacing:.18em;font-size:.72rem;opacity:.7;margin-bottom:10px}
-    .card .t{font-family:Georgia,serif;font-size:1.5rem;margin-bottom:8px}
-    .c-play .t{font-family:inherit;font-weight:800}
-    .card .d{font-size:.92rem;opacity:.85}
-    .card .go{display:inline-block;margin-top:18px;font-weight:600;font-size:.9rem}
-    .foot{margin-top:40px;font-size:.8rem;color:rgba(246,241,232,.4)}
-  </style>
+  <title>Mystery Scent Box 🎁 Abonament lunar de parfumuri | Scentry Box</title>
+  <meta name="description" content="Primul mystery scent box din România. În fiecare lună primești o cutie-surpriză cu 4-5 parfumuri de toate tipurile: parfum personal, parfum de ambient, hair mist și body mist, de la branduri de lux și creatori de nișă. Descoperă-ți următorul parfum preferat. Intră pe lista de așteptare." />
+  <meta name="theme-color" content="#F3EDFF" />
+  <link rel="canonical" href="https://scentrybox.ro/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mystery Scent Box 🎁 primul din România | Scentry Box" />
+  <meta property="og:description" content="O cutie-surpriză cu parfumuri de toate tipurile, în fiecare lună. Descoperă-ți următorul parfum preferat." />
+  <meta property="og:locale" content="ro_RO" />
+  <meta property="og:url" content="https://scentrybox.ro/" />
+  <meta property="og:image" content="https://scentrybox.ro/og-image.jpg" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>🎁</text></svg>" />
+  <link rel="stylesheet" href="assets/playful.css?v=2" />
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite","name":"Scentry Box","url":"https://scentrybox.ro/","description":"Primul mystery scent box din România: abonament lunar cu parfumuri de toate tipurile."}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"Ce este un mystery scent box?","acceptedAnswer":{"@type":"Answer","text":"Un mystery scent box este un abonament lunar prin care primești o selecție-surpriză de parfumuri în format mini, fără să știi dinainte ce conține cutia. Descoperi 4-5 parfumuri de toate tipurile, fără să cumperi orb o sticlă întreagă."}},
+    {"@type":"Question","name":"Ce conține o cutie Scentry Box?","acceptedAnswer":{"@type":"Answer","text":"Între 4 și 5 parfumuri de tipuri diferite: parfum personal, parfum de ambient, hair mist și body mist, dintre care 1-2 branduri cunoscute și 2-3 creații de nișă."}},
+    {"@type":"Question","name":"Cât costă abonamentul de parfumuri?","acceptedAnswer":{"@type":"Answer","text":"Mai puțin decât o sticlă întreagă pe care ai cumpăra-o orbește. Cifra exactă o afli prima, dacă ești pe listă."}},
+    {"@type":"Question","name":"Sunt produse originale?","acceptedAnswer":{"@type":"Answer","text":"Da, 100% originale. 4-5 parfumuri în format mini sau maxi, în ambalajul lor original."}}
+  ]}
+  </script>
 </head>
 <body>
-  <div class="brand">Scentry<b>Box</b></div>
-  <p class="lead">Două variante de design pentru landing page. Spune-mi care îți place mai mult. 🤍</p>
-  <div class="cards">
-    <a class="card c-edit" href="editorial.html">
-      <div class="k">Varianta 1</div>
-      <div class="t">Editorial luxe</div>
-      <div class="d">Elegant, rafinat, premium — serif amplu pe fundal crem.</div>
-      <span class="go">Vezi varianta 1 →</span>
-    </a>
-    <a class="card c-play" href="playful.html">
-      <div class="k">Varianta 2</div>
-      <div class="t">Bold &amp; playful</div>
-      <div class="d">Colorat, jucăuș, energic — perfect pentru TikTok/Instagram.</div>
-      <span class="go">Vezi varianta 2 →</span>
-    </a>
-  </div>
-  <p class="foot">Scentry Box — primul mystery scent box din România (preview)</p>
+
+  <header class="site-header">
+    <a class="brand" href="#top"><span class="brand-mark">Scentry</span><span class="brand-box">Box</span></a>
+    <a class="header-cta" href="#waitlist">Vreau pe listă</a>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="mystery-emoji">🎁✨</div>
+      <span class="badge">Primul mystery scent box din România</span>
+      <h1 class="hero-title">Ce parfum se<br /><span class="pop">ascunde</span> în cutie?</h1>
+      <p class="hero-sub">
+        Scentry Box îți trimite acasă, în fiecare lună, o <strong>cutie-surpriză</strong> cu parfumuri de toate
+        tipurile: parfum personal, parfum de ambient, hair mist și body mist, de la branduri de lux și creatori
+        de nișă. Tu descoperi, noi alegem surpriza.
+      </p>
+      <form id="waitlist" class="waitlist-form" novalidate>
+        <div class="field-row">
+          <label class="visually-hidden" for="email">Adresa de email</label>
+          <input type="email" id="email" name="EMAIL" inputmode="email" autocomplete="email" placeholder="adresa ta de email" required />
+          <button type="submit" class="btn-primary">Vreau pe listă</button>
+        </div>
+        <label class="consent">
+          <input type="checkbox" id="consent" name="consent" required />
+          <span>Sunt de acord ca adresa mea de email să fie prelucrată conform <a href="privacy.html" target="_blank" rel="noopener">Politicii de confidențialitate</a>, pentru a primi noutăți despre lansarea Scentry Box. Mă pot dezabona oricând.</span>
+        </label>
+        <p class="form-note">Gratuit și fără obligații. Primii înscriși primesc un beneficiu special în prima cutie. 🎉</p>
+        <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <!-- SEO: CE ESTE -->
+    <section class="section">
+      <span class="kicker">Despre concept</span>
+      <h2>Ce e un <span class="pop">mystery scent box</span>?</h2>
+      <div class="prose">
+        <p>
+          Un <strong>mystery scent box</strong> este un abonament lunar prin care primești o selecție-surpriză de
+          parfumuri, fără să știi dinainte ce e în cutie. În loc să dai 300-500 de lei orbește pe o sticlă
+          întreagă, descoperi în fiecare lună 4-5 parfumuri în format mini, de la branduri cunoscute la creații de
+          nișă numai bune de descoperit.
+        </p>
+        <p>
+          Scentry Box e <strong>primul scent box din România dedicat exclusiv parfumurilor</strong>, de toate
+          tipurile: nu doar parfum personal, ci și parfum de ambient pentru casă, hair mist pentru păr și body
+          mist pentru corp. O cutie, patru lumi olfactive, o nouă surpriză în fiecare lună.
+        </p>
+        <p>De aici vine și numele: <strong>Scentry</strong>, de la <span class="pop">scent + entry</span>, poarta ta de intrare în lumea parfumurilor.</p>
+      </div>
+    </section>
+
+    <!-- TIPURI -->
+    <section class="section">
+      <span class="kicker">Orice tip de parfum</span>
+      <h2>Toate tipurile, <span class="pop">o singură cutie</span></h2>
+      <div class="types-grid">
+        <article class="type-card">
+          <svg viewBox="0 0 48 48" style="width:46px;height:46px;display:block;margin:0 auto 12px;stroke:#6C4CE0;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round" aria-hidden="true">
+            <rect x="19" y="4" width="10" height="5" rx="1.5"/><path d="M21 9h6v4h-6z"/><rect x="14" y="13" width="20" height="29" rx="5"/><circle cx="37" cy="8" r="1"/><circle cx="40.5" cy="6" r="1"/><circle cx="40.5" cy="11" r="1"/>
+          </svg>
+          <p class="cat">Parfum personal</p>
+        </article>
+        <article class="type-card">
+          <svg viewBox="0 0 48 48" style="width:46px;height:46px;display:block;margin:0 auto 12px;stroke:#6C4CE0;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round" aria-hidden="true">
+            <path d="M24 5c-2.5 2.5-4 4.8-4 7a4 4 0 0 0 8 0c0-2.2-1.5-4.5-4-7z"/><line x1="24" y1="13" x2="24" y2="17"/><rect x="16" y="17" width="16" height="25" rx="2.5"/>
+          </svg>
+          <p class="cat">Parfum de ambient</p>
+        </article>
+        <article class="type-card">
+          <svg viewBox="0 0 48 48" style="width:46px;height:46px;display:block;margin:0 auto 12px;stroke:#6C4CE0;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round" aria-hidden="true">
+            <path d="M16 18h11v21a3 3 0 0 1-3 3h-5a3 3 0 0 1-3-3z"/><path d="M18 18v-3h7v3"/><rect x="25" y="9" width="9" height="5" rx="1.5"/><path d="M25 11h-3"/><circle cx="39" cy="8" r="1"/><circle cx="42" cy="5.5" r="1"/><circle cx="42" cy="11" r="1"/><circle cx="44.5" cy="8" r="1"/>
+          </svg>
+          <p class="cat">Hair mist</p>
+        </article>
+        <article class="type-card">
+          <svg viewBox="0 0 48 48" style="width:46px;height:46px;display:block;margin:0 auto 12px;stroke:#6C4CE0;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round" aria-hidden="true">
+            <rect x="18" y="14" width="14" height="28" rx="7"/><rect x="21" y="8" width="8" height="6" rx="1.5"/><path d="M25 8V5"/><circle cx="36" cy="10" r="1"/><circle cx="39" cy="7.5" r="1"/><circle cx="38" cy="13" r="1"/>
+          </svg>
+          <p class="cat">Body mist</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CUM FUNCȚIONEAZĂ -->
+    <section class="section">
+      <span class="kicker">Simplu ca un cadou lunar</span>
+      <h2>Cum <span class="pop">funcționează</span></h2>
+      <ol class="steps">
+        <li><span class="step-num">1</span><h3>Te înscrii</h3><p>Intri pe listă azi, gratuit și fără nicio obligație. Ești prima care află data lansării.</p></li>
+        <li><span class="step-num">2</span><h3>Primești surpriza</h3><p>În fiecare lună, o cutie-misterioasă cu 4-5 parfumuri de tipuri diferite, livrată la ușă sau în easybox.</p></li>
+        <li><span class="step-num">3</span><h3>Descoperi &amp; alegi</h3><p>Testezi în ritmul tău, găsești ce-ți place și poți comanda sticla full-size.</p></li>
+      </ol>
+    </section>
+
+    <!-- CE CONȚINE -->
+    <section class="section">
+      <span class="kicker">Bucuria descoperirii</span>
+      <h2>Ce <span class="pop">ascunde</span> fiecare cutie</h2>
+      <div class="box-split">
+        <div class="box-half box-half-known"><p class="box-tag">1-2 branduri cunoscute</p><p>Numele pe care le iubești deja: case mari de parfumuri, în format mini, oficial.</p></div>
+        <div class="box-half box-half-accent"><p class="box-tag">2-3 creații de nișă</p><p>Parfumuri și creatori pe care nu-i știai încă, partea de descoperire, alese cu grijă pentru tine.</p></div>
+      </div>
+    </section>
+
+    <!-- PREȚ (HINT) -->
+    <section class="section">
+      <span class="kicker">Cât costă?</span>
+      <h2>Mai puțin decât o <span class="pop">sticlă pe care o regreți</span></h2>
+      <div class="price-block">
+        <p class="big">Ai dat vreodată o avere pe un parfum care acum stă uitat în sertar? 🙈</p>
+        <p>Scentry Box întoarce povestea: încerci mai multe parfumuri într-o lună, la un preț prietenos, și abia apoi alegi sticla mare. Cât costă exact? Afli prima, dacă ești pe listă.</p>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="section">
+      <div class="section-final">
+        <h2>Fii printre primele 🎉</h2>
+        <p>Lista de așteptare e gratuită și fără obligații. Primii înscriși primesc un beneficiu special în prima cutie.</p>
+        <a href="#waitlist" class="btn-primary btn-large">Vreau pe listă</a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-faq">
+      <h2>Întrebări <span class="pop">frecvente</span></h2>
+      <details open><summary>Ce este un mystery scent box?</summary><p>Un abonament lunar prin care primești o cutie-surpriză cu 4-5 parfumuri în format mini, de toate tipurile, fără să știi dinainte ce conține. Descoperi parfumuri noi fără să cumperi orb o sticlă întreagă.</p></details>
+      <details><summary>Când se lansează?</summary><p>Suntem în faza de construcție. Înscrie-te pe listă și ești prima care află data exactă a lansării.</p></details>
+      <details><summary>Cât costă abonamentul?</summary><p>Mai puțin decât o sticlă întreagă pe care ai lua-o orbește. Iar cifra exactă o afli prima, dacă ești pe listă.</p></details>
+      <details><summary>Ce conține o cutie?</summary><p>Între 4 și 5 parfumuri de tipuri diferite: parfum personal, parfum de ambient, hair mist și body mist, dintre care 1-2 branduri cunoscute și 2-3 creații de nișă.</p></details>
+      <details><summary>Sunt produse originale?</summary><p>Da, 100% originale. În fiecare cutie ai 4-5 parfumuri în format mini sau maxi, direct în ambalajul lor original.</p></details>
+      <details><summary>Pot anula oricând?</summary><p>Da. Abonamentul va fi flexibil și poate fi anulat oricând.</p></details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand"><span class="brand-mark">Scentry</span><span class="brand-box">Box</span><p>Primul mystery scent box din România.</p></div>
+    <nav class="footer-links" aria-label="Legal">
+      <a href="privacy.html">Politica de confidențialitate</a>
+      <a href="cookies.html">Politica de cookies</a>
+      <a href="terms.html">Termeni de utilizare</a>
+      <button type="button" class="link-button" id="cookieSettingsBtn">Setări cookies</button>
+    </nav>
+    <p class="footer-legal">© <span id="year">2026</span> Scentry Box. Toate drepturile rezervate.<br />Scentry Box este un proiect independent. Numele și mărcile terțe menționate aparțin deținătorilor lor de drept și sunt folosite doar cu scop descriptiv.</p>
+  </footer>
+
+  <script src="assets/consent.js" defer></script>
+  <script src="assets/app.js" defer></script>
 </body>
 </html>
