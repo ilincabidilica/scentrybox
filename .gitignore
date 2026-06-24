@@ -8,3 +8,8 @@ _preview/
 
 # fisiere HAR (contin tokenuri/cookie-uri) - NU le urca
 *.har
+
+# drafturi logo / assets locale (nu in repo)
+1 copy.png
+2 copy.jpeg
+scentrybox-avatar-400.png

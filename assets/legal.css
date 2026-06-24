@@ -15,6 +15,13 @@ body{margin:0;color:var(--ink);font-family:var(--round);font-size:16px;line-heig
 .legal-header .brand b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .legal-header .home{font-size:.9rem;font-weight:700;text-decoration:none;color:var(--violet)}
 .legal-header .home:hover{color:var(--rose)}
+.legal-header-right{display:flex;align-items:center;gap:12px}
+.lang-switch{display:inline-flex;border:1px solid var(--line-hi);border-radius:999px;overflow:hidden}
+.lang-switch a{padding:6px 11px;font-size:.78rem;font-weight:800;letter-spacing:.04em;color:var(--muted);text-decoration:none}
+.lang-switch a:hover{color:var(--ink)}
+.lang-switch a.active{background:var(--grad);color:var(--on-cta)}
+.lang-switch a.active:hover{color:var(--on-cta)}
+@media(max-width:600px){.legal-header{flex-wrap:wrap;gap:10px}}
 
 .legal{max-width:840px;margin:0 auto 60px;background:var(--card);border:1px solid var(--line-hi);border-radius:24px;
   box-shadow:0 24px 60px -28px rgba(0,0,0,.7);padding:46px 52px}

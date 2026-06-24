@@ -58,18 +58,31 @@
     // (lăsat gol intenționat — nimic nu se încarcă până nu adaugi codul de mai sus)
   }
 
+  /* ---- text bilingv, după limba paginii ---- */
+  var EN = (document.documentElement.lang || "ro").toLowerCase().indexOf("en") === 0;
+  var TXT = EN ? {
+    aria: "Cookie consent",
+    body: 'We use strictly necessary cookies for the site to work and, only with your consent, ' +
+          'analytics and marketing cookies. Details in our <a href="cookies.html">Cookie Policy</a>.',
+    reject: "Decline", accept: "Accept"
+  } : {
+    aria: "Consimțământ cookies",
+    body: 'Folosim cookie-uri strict necesare pentru funcționarea site-ului și, doar cu acordul tău, ' +
+          'cookie-uri de analiză și marketing. Detalii în <a href="cookies.html">Politica de cookies</a>.',
+    reject: "Refuz", accept: "Accept"
+  };
+
   /* ---- UI banner ---- */
   function buildBanner() {
     var b = document.createElement("div");
     b.className = "cookie-banner";
     b.setAttribute("role", "dialog");
-    b.setAttribute("aria-label", "Consimțământ cookies");
+    b.setAttribute("aria-label", TXT.aria);
     b.innerHTML =
-      '<p>Folosim cookie-uri strict necesare pentru funcționarea site-ului și, doar cu acordul tău, ' +
-      'cookie-uri de analiză și marketing. Detalii în <a href="cookies.html">Politica de cookies</a>.</p>' +
+      '<p>' + TXT.body + '</p>' +
       '<div class="cookie-actions">' +
-      '<button type="button" class="btn-reject" id="ckReject">Refuz</button>' +
-      '<button type="button" class="btn-accept" id="ckAccept">Accept</button>' +
+      '<button type="button" class="btn-reject" id="ckReject">' + TXT.reject + '</button>' +
+      '<button type="button" class="btn-accept" id="ckAccept">' + TXT.accept + '</button>' +
       "</div>";
     document.body.appendChild(b);
 

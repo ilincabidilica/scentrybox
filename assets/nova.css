@@ -67,6 +67,12 @@ a:hover { color: var(--rose); }
 .header-cta { font-size: .9rem; font-weight: 800; color: var(--on-cta); background: var(--cta); border-radius: 999px; padding: 11px 22px;
   transition: transform .2s, filter .25s; box-shadow: 0 10px 30px -10px rgba(255,122,102,.55); }
 .header-cta:hover { color: var(--on-cta); transform: translateY(-2px); filter: brightness(1.05); }
+.header-right { display: flex; align-items: center; gap: 12px; }
+.lang-switch { display: inline-flex; border: 1px solid var(--line-hi); border-radius: 999px; overflow: hidden; }
+.lang-switch a { padding: 7px 11px; font-size: .78rem; font-weight: 800; letter-spacing: .04em; color: var(--muted); }
+.lang-switch a:hover { color: var(--ink); }
+.lang-switch a.active { background: var(--grad); color: var(--on-cta); }
+.lang-switch a.active:hover { color: var(--on-cta); }
 
 /* ===== HERO ===== */
 .hero { position: relative; max-width: 880px; margin: 0 auto; padding: 30px 24px 70px; text-align: center; }

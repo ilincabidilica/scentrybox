@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 160" width="560" height="160" role="img" aria-label="Scentry Box">
+  <defs>
+    <!-- lichid holografic în sferă -->
+    <linearGradient id="sphere" x1="20%" y1="0%" x2="85%" y2="100%">
+      <stop offset="0%" stop-color="#B98CFF"/>
+      <stop offset="42%" stop-color="#FF7A66"/>
+      <stop offset="70%" stop-color="#E0A9C7"/>
+      <stop offset="100%" stop-color="#FFB199"/>
+    </linearGradient>
+    <!-- gradient pentru cuvântul „Box" -->
+    <linearGradient id="box" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C49BFF"/>
+      <stop offset="100%" stop-color="#E0A9C7"/>
+    </linearGradient>
+    <!-- highlight de sticlă -->
+    <radialGradient id="gloss" cx="35%" cy="28%" r="55%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity=".7"/>
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <!-- glow exterior -->
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="7" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- ICON: sfera de cristal -->
+  <g filter="url(#glow)">
+    <circle cx="80" cy="84" r="46" fill="url(#sphere)"/>
+    <circle cx="80" cy="84" r="46" fill="url(#gloss)"/>
+    <circle cx="80" cy="84" r="46" fill="none" stroke="#F3ECFF" stroke-opacity=".35" stroke-width="1.5"/>
+  </g>
+  <!-- inel orbital subtil -->
+  <ellipse cx="80" cy="84" r="0" rx="58" ry="22" fill="none" stroke="#B98CFF" stroke-opacity=".5" stroke-width="1.5" transform="rotate(-24 80 84)"/>
+
+  <!-- PULVERIZARE: evantai de puncte din vârful sferei -->
+  <g fill="#FFB199">
+    <circle cx="92" cy="34" r="3.4" opacity=".95"/>
+    <circle cx="108" cy="26" r="2.8" fill="#FF7A66" opacity=".9"/>
+    <circle cx="124" cy="34" r="2.4" fill="#E0A9C7" opacity=".85"/>
+    <circle cx="102" cy="16" r="2.2" fill="#F3ECFF" opacity=".9"/>
+    <circle cx="118" cy="18" r="1.8" fill="#FFB199" opacity=".8"/>
+    <circle cx="134" cy="26" r="1.6" fill="#B98CFF" opacity=".75"/>
+    <circle cx="90" cy="20" r="1.6" fill="#F3ECFF" opacity=".7"/>
+  </g>
+
+  <!-- WORDMARK -->
+  <text x="150" y="104" font-family="-apple-system, 'SF Pro Rounded', ui-rounded, 'Segoe UI', system-ui, Arial, sans-serif" font-size="62" font-weight="800" letter-spacing="-2">
+    <tspan fill="#F3ECFF">Scentry</tspan><tspan fill="url(#box)" dx="6">Box</tspan>
+  </text>
+</svg>

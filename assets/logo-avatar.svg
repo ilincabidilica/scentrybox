@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="Scentry Box">
+  <defs>
+    <linearGradient id="sphereA" x1="20%" y1="0%" x2="85%" y2="100%">
+      <stop offset="0%" stop-color="#B98CFF"/>
+      <stop offset="42%" stop-color="#FF7A66"/>
+      <stop offset="70%" stop-color="#E0A9C7"/>
+      <stop offset="100%" stop-color="#FFB199"/>
+    </linearGradient>
+    <linearGradient id="boxA" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C49BFF"/>
+      <stop offset="100%" stop-color="#E0A9C7"/>
+    </linearGradient>
+    <radialGradient id="glossA" cx="35%" cy="28%" r="55%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity=".7"/>
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bgA" cx="50%" cy="32%" r="80%">
+      <stop offset="0%" stop-color="#2A1A40"/>
+      <stop offset="60%" stop-color="#160E28"/>
+      <stop offset="100%" stop-color="#100819"/>
+    </radialGradient>
+    <filter id="glowA" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="9" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- fundal plum noir, colțuri rotunjite -->
+  <rect width="400" height="400" rx="92" fill="url(#bgA)"/>
+
+  <!-- sfera de cristal -->
+  <g filter="url(#glowA)">
+    <circle cx="200" cy="168" r="78" fill="url(#sphereA)"/>
+    <circle cx="200" cy="168" r="78" fill="url(#glossA)"/>
+    <circle cx="200" cy="168" r="78" fill="none" stroke="#F3ECFF" stroke-opacity=".35" stroke-width="2"/>
+  </g>
+
+  <!-- pulverizare de puncte -->
+  <g>
+    <circle cx="220" cy="74" r="6" fill="#FFB199" opacity=".95"/>
+    <circle cx="246" cy="58" r="5" fill="#FF7A66" opacity=".9"/>
+    <circle cx="270" cy="72" r="4.2" fill="#E0A9C7" opacity=".85"/>
+    <circle cx="236" cy="40" r="4" fill="#F3ECFF" opacity=".9"/>
+    <circle cx="260" cy="44" r="3.2" fill="#FFB199" opacity=".8"/>
+    <circle cx="286" cy="58" r="3" fill="#B98CFF" opacity=".75"/>
+    <circle cx="214" cy="46" r="3" fill="#F3ECFF" opacity=".7"/>
+  </g>
+
+  <!-- numele, vizibil -->
+  <text x="200" y="320" text-anchor="middle" font-family="-apple-system, 'SF Pro Rounded', ui-rounded, 'Segoe UI', system-ui, Arial, sans-serif" font-size="52" font-weight="800" letter-spacing="-1.5">
+    <tspan fill="#F3ECFF">Scentry</tspan><tspan fill="url(#boxA)" dx="4">Box</tspan>
+  </text>
+  <text x="200" y="356" text-anchor="middle" font-family="-apple-system, 'SF Pro Rounded', ui-rounded, 'Segoe UI', system-ui, Arial, sans-serif" font-size="15" font-weight="600" letter-spacing="3" fill="#B0A2C4">MYSTERY SCENT BOX</text>
+</svg>

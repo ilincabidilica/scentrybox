@@ -23,6 +23,30 @@
   var MAILCHIMP_URL = ""; // <-- lipește aici URL-ul "action" din embed-ul Mailchimp
   var MAILCHIMP_BOT = ""; // <-- opțional: name-ul câmpului ascuns b_XXXX_YYYY
 
+  // mesaje bilingve, după limba paginii (<html lang="ro"> / "en">)
+  var LANG = (document.documentElement.lang || "ro").toLowerCase().indexOf("en") === 0 ? "en" : "ro";
+  var T = {
+    ro: {
+      invalid: "Te rugăm să introduci o adresă de email validă.",
+      consent: "Bifează acordul pentru a continua.",
+      noconf: "⚠️ Formular neconfigurat încă — adaugă MAILCHIMP_URL în assets/app.js (vezi README).",
+      sending: "Se trimite…",
+      success: "Gata! Ești pe listă. 🤍 Verifică-ți emailul pentru confirmare.",
+      already: "Ești deja pe listă. 🤍",
+      error: "Ceva n-a mers. Mai încearcă o dată în câteva momente."
+    },
+    en: {
+      invalid: "Please enter a valid email address.",
+      consent: "Please tick the consent box to continue.",
+      noconf: "⚠️ Form not configured yet — add MAILCHIMP_URL in assets/app.js (see README).",
+      sending: "Sending…",
+      success: "Done! You're on the list. 🤍 Check your email to confirm.",
+      already: "You're already on the list. 🤍",
+      error: "Something went wrong. Please try again in a moment."
+    }
+  };
+  var t = T[LANG];
+
   var form = document.getElementById("waitlist");
   var msg = document.getElementById("formMessage");
   var emailInput = document.getElementById("email");
@@ -81,23 +105,23 @@
 
     var email = emailInput.value.trim();
     if (!validEmail(email)) {
-      setMessage("Te rugăm să introduci o adresă de email validă.", "error");
+      setMessage(t.invalid, "error");
       emailInput.focus();
       return;
     }
     if (!consentInput.checked) {
-      setMessage("Bifează acordul pentru a continua.", "error");
+      setMessage(t.consent, "error");
       return;
     }
     if (!MAILCHIMP_URL) {
-      setMessage("⚠️ Formular neconfigurat încă — adaugă MAILCHIMP_URL în assets/app.js (vezi README).", "error");
+      setMessage(t.noconf, "error");
       return;
     }
 
     var btn = form.querySelector('button[type="submit"]');
     var original = btn.textContent;
     btn.disabled = true;
-    btn.textContent = "Se trimite…";
+    btn.textContent = t.sending;
 
     mailchimpSubscribe(email, function (data) {
       btn.disabled = false;
@@ -105,11 +129,11 @@
 
       if (data.result === "success") {
         form.reset();
-        setMessage("Gata! Ești pe listă. 🤍 Verifică-ți emailul pentru confirmare.", "success");
+        setMessage(t.success, "success");
       } else if (data.msg && /already subscribed/i.test(data.msg)) {
-        setMessage("Ești deja pe listă. 🤍", "success");
+        setMessage(t.already, "success");
       } else {
-        setMessage("Ceva n-a mers. Mai încearcă o dată în câteva momente.", "error");
+        setMessage(t.error, "error");
       }
     });
   });
