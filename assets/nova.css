@@ -156,11 +156,12 @@ a:hover { color: var(--rose); }
 .panel { border-radius: 24px; padding: 32px; border: 1px solid var(--line-hi); }
 .panel-known { background: var(--glass); }
 .panel-accent { background: var(--grad); color: #2A1240; }
-.panel-accent p { color: rgba(42,18,64,.82); }
 .panel .tag { font-weight: 800; font-size: 1.15rem; margin-bottom: 8px; }
 .panel-known .tag { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .panel-accent .tag { color: #2A1240; }
 .panel p { color: var(--muted); } .panel p:last-child { margin-bottom: 0; }
+/* textul de pe panoul colorat = plum închis, lizibil (suprascrie .panel p de mai sus) */
+.panel.panel-accent p { color: #2A1240; }
 
 /* preț */
 .price { max-width: 620px; margin: 36px auto 0; padding: 42px 34px; border-radius: 28px; position: relative; background: var(--glass); border: 1px solid var(--line-hi); }

@@ -1,42 +1,51 @@
-/* Scentry Box — stil pagini legale (asortat cu tema playful) */
+/* Scentry Box — stil pagini legale (asortat cu tema „Nova": plum + coral) */
 :root{
-  --bg:#F3EDFF; --card:#FFFFFF; --ink:#241B3A; --muted:#6E6485;
-  --violet:#6C4CE0; --violet-dark:#5436C4; --line:#E6DBFF;
+  --bg:#160E28; --bg-top:#241638; --card:#20143A; --ink:#F3ECFF; --muted:#B0A2C4;
+  --violet:#B98CFF; --rose:#E0A9C7; --coral:#FF7A66; --on-cta:#3A1226;
+  --line:rgba(220,205,255,.12); --line-hi:rgba(220,205,255,.22);
+  --grad:linear-gradient(100deg,#C49BFF,#E0A9C7); --cta:linear-gradient(100deg,#FF7A66,#FFB199);
   --round:-apple-system,"SF Pro Rounded",ui-rounded,"Segoe UI",system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
 }
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--round);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+body{margin:0;color:var(--ink);font-family:var(--round);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;
+  background:radial-gradient(120% 70% at 50% -10%,var(--bg-top) 0%,var(--bg) 60%) fixed,var(--bg);min-height:100vh}
 
 .legal-header{max-width:840px;margin:0 auto;padding:22px 24px;display:flex;align-items:center;justify-content:space-between}
 .legal-header .brand{font-weight:800;font-size:1.35rem;text-decoration:none;color:var(--ink)}
-.legal-header .brand b{color:var(--violet)}
-.legal-header .home{font-size:.9rem;font-weight:700;text-decoration:none;color:var(--violet-dark)}
-.legal-header .home:hover{text-decoration:underline}
+.legal-header .brand b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.legal-header .home{font-size:.9rem;font-weight:700;text-decoration:none;color:var(--violet)}
+.legal-header .home:hover{color:var(--rose)}
 
-.legal{max-width:840px;margin:0 auto 60px;background:var(--card);border-radius:24px;box-shadow:0 18px 44px -20px rgba(108,76,224,.28);padding:46px 52px}
+.legal{max-width:840px;margin:0 auto 60px;background:var(--card);border:1px solid var(--line-hi);border-radius:24px;
+  box-shadow:0 24px 60px -28px rgba(0,0,0,.7);padding:46px 52px}
 .legal h1{font-size:clamp(1.8rem,4vw,2.4rem);margin:0 0 .12em;color:var(--ink)}
 .legal .updated{color:var(--muted);font-size:.9rem;margin-bottom:26px}
 .legal .lead{color:var(--muted);font-size:1.02rem;margin-bottom:8px}
-.legal h2{font-size:1.18rem;margin:30px 0 .4em;color:var(--violet-dark)}
-.legal h3{font-size:1.02rem;margin:18px 0 .3em}
-.legal p,.legal li{color:#3a3450}
-.legal a{color:var(--violet-dark)}
+.legal h2{font-size:1.18rem;margin:30px 0 .4em;color:var(--violet)}
+.legal h3{font-size:1.02rem;margin:18px 0 .3em;color:var(--ink)}
+.legal p,.legal li{color:#CBC2E0}
+.legal a{color:var(--violet);font-weight:600}
+.legal a:hover{color:var(--rose)}
+.legal strong{color:var(--ink)}
 .legal ul{padding-left:20px;margin:.4em 0}
 .legal li{margin-bottom:6px}
 .legal table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.92rem}
 .legal th,.legal td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
-.legal th{background:#F6F1FF}
-.legal .back{display:inline-block;margin-top:28px;text-decoration:none;font-weight:700;color:var(--violet-dark)}
-.legal .back:hover{text-decoration:underline}
-.legal .placeholder{background:#FFF4D6;border-radius:5px;padding:1px 6px;font-size:.92em}
+.legal th{background:rgba(255,255,255,.05);color:var(--ink)}
+.legal .back{display:inline-block;margin-top:28px;text-decoration:none;font-weight:700;color:var(--violet)}
+.legal .back:hover{color:var(--rose)}
+/* marcaje „de completat" — coral, ca să sară în ochi cât sunt necompletate */
+.legal .placeholder{background:rgba(255,122,102,.2);color:#FFCFC5;border:1px solid rgba(255,122,102,.4);border-radius:5px;padding:1px 6px;font-size:.92em}
 
-/* banner cookies (acelasi ca pe site) */
-.cookie-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:1000;max-width:680px;margin:0 auto;background:#fff;border:2px solid var(--line);border-radius:20px;box-shadow:0 18px 44px -20px rgba(108,76,224,.3);padding:20px 22px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
+/* banner cookies (asortat cu tema Nova) */
+.cookie-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:1000;max-width:700px;margin:0 auto;background:#1C1234;
+  border:1px solid var(--line-hi);border-radius:20px;box-shadow:0 24px 60px -20px rgba(0,0,0,.8);padding:20px 22px;
+  display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
 .cookie-banner p{margin:0;font-size:.9rem;color:var(--muted);flex:1 1 260px}
 .cookie-actions{display:flex;gap:10px}
 .cookie-actions button{border-radius:12px;padding:11px 22px;font-size:.9rem;font-weight:800;cursor:pointer;border:0;font-family:var(--round)}
-.btn-reject{background:var(--line);color:var(--ink)}
-.btn-accept{background:var(--violet);color:#fff}
-.btn-accept:hover{background:var(--violet-dark)}
+.btn-reject{background:rgba(255,255,255,.08);color:var(--ink);border:1px solid var(--line-hi)}
+.btn-accept{background:var(--cta);color:var(--on-cta)}
+.btn-accept:hover{filter:brightness(1.05)}
 
 @media(max-width:600px){.legal{padding:30px 22px;border-radius:18px}}
