@@ -5,3 +5,6 @@ ScentBox_Branduri.xlsx
 # fisiere de sistem / preview
 .DS_Store
 _preview/
+
+# fisiere HAR (contin tokenuri/cookie-uri) - NU le urca
+*.har
