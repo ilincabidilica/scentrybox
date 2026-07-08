@@ -33,6 +33,9 @@
       sending: "Se trimite…",
       success: "Gata! Ești pe listă. 🤍 Ți-am trimis un email de bun venit.",
       already: "Ești deja pe listă. 🤍",
+      referral: "Ești deja pe listă! 🤍 Dar parfumul e mai frumos împărțit — cheamă o prietenă să descopere și ea:",
+      copy: "Copiază linkul 💌",
+      copied: "Link copiat! ✨",
       error: "Ceva n-a mers. Mai încearcă o dată în câteva momente."
     },
     en: {
@@ -42,6 +45,9 @@
       sending: "Sending…",
       success: "Done! You're on the list. 🤍 We've sent you a welcome email.",
       already: "You're already on the list. 🤍",
+      referral: "You're already on the list! 🤍 But scent is better shared — bring a friend to discover it too:",
+      copy: "Copy the link 💌",
+      copied: "Link copied! ✨",
       error: "Something went wrong. Please try again in a moment."
     }
   };
@@ -51,6 +57,12 @@
   var msg = document.getElementById("formMessage");
   var emailInput = document.getElementById("email");
   var consentInput = document.getElementById("consent");
+  var consentLabel = consentInput ? consentInput.closest(".consent") : null;
+
+  // scoate highlight-ul de eroare când bifează acordul
+  if (consentInput) consentInput.addEventListener("change", function () {
+    if (consentInput.checked && consentLabel) consentLabel.classList.remove("consent-error");
+  });
 
   // anul în footer
   var y = document.getElementById("year");
@@ -61,6 +73,35 @@
   function setMessage(text, type) {
     msg.textContent = text;
     msg.className = "form-message" + (type ? " " + type : "");
+  }
+
+  // evidențiază câmpul de consimțământ (contur roșu + shake)
+  function highlightConsent() {
+    if (!consentLabel) return;
+    consentLabel.classList.remove("consent-error");
+    void consentLabel.offsetWidth; // reflow ca să repornească animația
+    consentLabel.classList.add("consent-error");
+  }
+
+  // mesaj „deja pe listă" + buton de recomandare (copiază linkul)
+  function showReferral() {
+    var url = location.href.split("#")[0];
+    msg.className = "form-message success";
+    msg.innerHTML = "";
+    var span = document.createElement("span");
+    span.textContent = t.referral + " ";
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "share-link";
+    btn.textContent = t.copy;
+    btn.addEventListener("click", function () {
+      var done = function () { btn.textContent = t.copied; };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(done, done);
+      } else { done(); }
+    });
+    msg.appendChild(span);
+    msg.appendChild(btn);
   }
 
   function validEmail(v) {
@@ -111,8 +152,10 @@
     }
     if (!consentInput.checked) {
       setMessage(t.consent, "error");
+      highlightConsent();
       return;
     }
+    if (consentLabel) consentLabel.classList.remove("consent-error");
     if (!MAILCHIMP_URL) {
       setMessage(t.noconf, "error");
       return;
@@ -130,8 +173,8 @@
       if (data.result === "success") {
         form.reset();
         setMessage(t.success, "success");
-      } else if (data.msg && /already subscribed/i.test(data.msg)) {
-        setMessage(t.already, "success");
+      } else if (data.msg && /already subscribed|already a list member/i.test(data.msg)) {
+        showReferral();
       } else {
         setMessage(t.error, "error");
       }
