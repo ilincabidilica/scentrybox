@@ -20,8 +20,8 @@
 (function () {
   "use strict";
 
-  var MAILCHIMP_URL = ""; // <-- lipește aici URL-ul "action" din embed-ul Mailchimp
-  var MAILCHIMP_BOT = ""; // <-- opțional: name-ul câmpului ascuns b_XXXX_YYYY
+  var MAILCHIMP_URL = "https://gmail.us19.list-manage.com/subscribe/post?u=f17d311b349e1ca29bd588d43&id=9a92102a62&f_id=0094c2e1f0";
+  var MAILCHIMP_BOT = "b_f17d311b349e1ca29bd588d43_9a92102a62";
 
   // mesaje bilingve, după limba paginii (<html lang="ro"> / "en">)
   var LANG = (document.documentElement.lang || "ro").toLowerCase().indexOf("en") === 0 ? "en" : "ro";
