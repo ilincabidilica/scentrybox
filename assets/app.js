@@ -170,11 +170,14 @@
       btn.disabled = false;
       btn.textContent = original;
 
-      if (data.result === "success") {
+      // Mailchimp întoarce result:"success" ȘI pentru email deja înscris
+      // (msg conține "already subscribed") — verificăm asta ÎNAINTE de succesul normal.
+      var already = data.msg && /already subscribed|already a list member/i.test(data.msg);
+      if (already) {
+        showReferral();
+      } else if (data.result === "success") {
         form.reset();
         setMessage(t.success, "success");
-      } else if (data.msg && /already subscribed|already a list member/i.test(data.msg)) {
-        showReferral();
       } else {
         setMessage(t.error, "error");
       }
