@@ -31,7 +31,7 @@
       consent: "Bifează acordul pentru a continua.",
       noconf: "⚠️ Formular neconfigurat încă — adaugă MAILCHIMP_URL în assets/app.js (vezi README).",
       sending: "Se trimite…",
-      success: "Gata! Ești pe listă. 🤍 Verifică-ți emailul pentru confirmare.",
+      success: "Gata! Ești pe listă. 🤍 Ți-am trimis un email de bun venit.",
       already: "Ești deja pe listă. 🤍",
       error: "Ceva n-a mers. Mai încearcă o dată în câteva momente."
     },
@@ -40,7 +40,7 @@
       consent: "Please tick the consent box to continue.",
       noconf: "⚠️ Form not configured yet — add MAILCHIMP_URL in assets/app.js (see README).",
       sending: "Sending…",
-      success: "Done! You're on the list. 🤍 Check your email to confirm.",
+      success: "Done! You're on the list. 🤍 We've sent you a welcome email.",
       already: "You're already on the list. 🤍",
       error: "Something went wrong. Please try again in a moment."
     }
