@@ -132,6 +132,7 @@
     // /post -> /post-json + callback JSONP
     var base = MAILCHIMP_URL.replace("/post?", "/post-json?");
     var url = base + "&EMAIL=" + encodeURIComponent(email);
+    url += "&LANG=" + LANG.toUpperCase(); // RO / EN — pt. split pe limbă (Customer Journey)
     if (MAILCHIMP_BOT) url += "&" + encodeURIComponent(MAILCHIMP_BOT) + "=";
     url += "&c=" + cbName;
 
