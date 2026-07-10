@@ -118,7 +118,7 @@ a:hover { color: var(--rose); }
 .btn-primary { color: var(--on-cta); border: 0; border-radius: 14px; padding: 16px 28px; font-size: 1.02rem; font-family: var(--round); font-weight: 800;
   cursor: pointer; white-space: nowrap; background: var(--cta); background-size: 200% auto; transition: transform .15s, background-position .4s, filter .2s;
   box-shadow: 0 12px 34px -8px rgba(255,122,102,.65); }
-.btn-primary:hover { background-position: right center; transform: translateY(-2px); filter: brightness(1.05); }
+.btn-primary:hover { color: var(--on-cta); background-position: right center; transform: translateY(-2px); filter: brightness(1.05); }
 .btn-primary:active { transform: none; }
 .btn-primary:disabled { opacity: .6; cursor: default; }
 .btn-large { display: inline-block; padding: 18px 46px; font-size: 1.12rem; }
